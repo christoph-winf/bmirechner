@@ -13,6 +13,7 @@ public class Main {
         float groesse;
         float bmi;
         String name;
+        int alter;
 
         System.out.println("Wie viel wiegst du (in kg)?");
         gewicht = sc.nextFloat();
@@ -20,15 +21,17 @@ public class Main {
         System.out.println("Wie groß bist du (in Metern)?");
         groesse = sc.nextFloat();
 
-        System.out.println("Gibt bitte deinnen Namen an:");
+        System.out.println("Gibt bitte deinen Namen an:");
         name = sc.next();
-        System.out.println("Test: "+ name);
+        System.out.println("Wie alt bist du (in Jahren)?");
+        alter = sc.nextInt();
+       // System.out.println("Test: "+ name);
 
         bmi = gewicht / (groesse * groesse);
 
         System.out.println("Dein BMI beträgt: " + bmi);
 
-        if (bmi < 20)
+        if (bmi < 20 && alter >18)
 
         {
             System.out.println("Du bist untergewichtig");
